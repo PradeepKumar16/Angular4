@@ -1,0 +1,15 @@
+<div>
+<br>
+<hr>
+<label>Customers List</label><br>
+<div class="col-md-6" *ngIf="customers && customers?.length > 0">
+    <select id="customers" 
+        [(ngModel)]="selectedCustomerId">
+        <option *ngFor="let product of customers"
+             value="{{product.customerId}}">
+             {{ product.customerName }}
+        </option>
+    </select>
+ </div>
+</div>
+
